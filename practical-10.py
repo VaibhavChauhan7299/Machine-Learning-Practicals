@@ -1,3 +1,7 @@
+"""Practical 10: Backpropagation Demonstration + End-to-End ML Application
+Objective: Demonstrate the backpropagation/learning process, then build a complete end-to-end ML workflow (preprocessing → training → evaluation → prediction).
+Explanation — Part A (Backpropagation from scratch): Backpropagation computes the gradient of the loss with respect to each weight by applying the chain rule, propagating the error backward from output to input layer, and updating weights via gradient descent: W = W - learning_rate * dL/dW."""
+
 import numpy as np
 
 # ---- Part A: Backpropagation demo from scratch (single hidden layer, XOR problem) ----

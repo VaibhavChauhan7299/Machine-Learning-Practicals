@@ -1,3 +1,7 @@
+"""Practical 9: Artificial Neural Network — Implementation, Training, Evaluation
+Objective: Implement an ANN, define architecture, train on a dataset, evaluate performance.
+Explanation: An ANN consists of an input layer, one or more hidden layers (with activation functions like ReLU), and an output layer (softmax for multi-class classification). It's trained using forward propagation + backpropagation with an optimizer like Adam, minimizing a loss function (e.g., categorical cross-entropy)."""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris

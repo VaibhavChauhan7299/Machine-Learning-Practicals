@@ -1,3 +1,7 @@
+"""Practical 3: Train an ML Model and Evaluate Using Train/Test Split
+Objective: Split data into training/testing sets, train a model, evaluate performance, and interpret results.
+Explanation: The dataset is split (commonly 70:30 or 80:20) into training data (to fit the model) and testing data (to check generalization on unseen data). Common evaluation metrics: accuracy, precision, recall, F1-score (classification) or MSE/R² (regression)."""
+
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
@@ -29,3 +33,5 @@ acc = accuracy_score(y_test, y_pred)
 print("\nAccuracy:", acc)
 print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred, target_names=iris.target_names)) # pyright: ignore[reportAttributeAccessIssue]
+
+"""Interpretation: Accuracy tells overall correctness; the confusion matrix shows per-class errors; precision/recall/F1 show how well each class is predicted, useful when classes are imbalanced."""

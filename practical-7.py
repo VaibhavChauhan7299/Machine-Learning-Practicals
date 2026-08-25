@@ -1,3 +1,7 @@
+"""Practical 7: Clustering on an Unlabeled Dataset
+Objective: Implement clustering and analyze the resulting groups.
+Explanation: Clustering is unsupervised learning: grouping data points by similarity without labels. K-Means partitions data into k clusters by minimizing within-cluster variance. The Elbow method helps choose a good k."""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -44,3 +48,5 @@ print("\nCross-tab of Cluster vs Actual Species:\n", pd.crosstab(df['Cluster'], 
 
 sil_score = silhouette_score(X_scaled, clusters)
 print("\nSilhouette Score:", sil_score)
+
+"""Interpretation: Silhouette score (range -1 to 1) measures how well-separated clusters are; the cross-tab shows how well unsupervised clusters align with the true species groups."""

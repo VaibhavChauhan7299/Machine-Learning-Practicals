@@ -1,3 +1,7 @@
+"""Practical 5: Regression Algorithm — Implementation and Evaluation
+Objective: Implement a regression algorithm and evaluate the regression model.
+Explanation: Regression predicts a continuous value. We use Linear Regression on the California housing dataset. Evaluation metrics: MAE, MSE, RMSE, and R² score (goodness of fit)."""
+
 import numpy as np
 import pandas as pd
 from sklearn.datasets import fetch_california_housing
@@ -34,3 +38,5 @@ print("\nModel Coefficients:")
 for name, coef in zip(data.feature_names, model.coef_): # pyright: ignore[reportAttributeAccessIssue]
     print(f"  {name}: {coef:.4f}")
 print("Intercept:", model.intercept_)
+
+"""Interpretation: R² close to 1 means the model explains most of the variance in house prices; RMSE gives the average prediction error in the same units as the target."""

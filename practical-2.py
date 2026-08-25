@@ -1,3 +1,9 @@
+"""Practical 2: Feature Selection and Dimensionality Reduction
+Objective: Identify relevant features and demonstrate feature subset selection / dimensionality reduction.
+Explanation:
+Feature selection picks the most relevant original features (e.g., using correlation, SelectKBest with chi2/ANOVA, or feature importance from a tree model).
+Dimensionality reduction (e.g., PCA) transforms features into a smaller set of new components that retain most of the variance/information. Both reduce overfitting, training time, and noise."""
+
 import pandas as pd
 import numpy as np
 from typing import Any, cast

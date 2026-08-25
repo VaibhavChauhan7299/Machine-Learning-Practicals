@@ -1,3 +1,7 @@
+"""Practical 4: Classification Algorithm — Implementation and Evaluation
+Objective: Implement a classification algorithm on an appropriate dataset and evaluate it.
+Explanation: Classification predicts a discrete label. Here we use Decision Tree and K-Nearest Neighbors (KNN) on the Iris dataset, and compare them using accuracy, precision, recall, F1, and a confusion matrix."""
+
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split

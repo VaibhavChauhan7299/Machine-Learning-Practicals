@@ -1,3 +1,7 @@
+"""Practical 6: Bayes' Theorem for Concept Learning
+Objective: Apply Bayes' theorem to a concept-learning problem and interpret the prediction.
+Explanation: Bayes' theorem: P(H|E) = P(E|H) * P(H) / P(E). In concept learning, we compute the posterior probability of a hypothesis (class) given evidence (features), and pick the class with the highest posterior — this is exactly what Naive Bayes does, assuming feature independence."""
+""""""
 import pandas as pd
 import numpy as np
 
@@ -49,3 +53,5 @@ nb.fit(X_train, y_train)
 y_pred = nb.predict(X_test)
 
 print("\nGaussianNB Accuracy on Iris:", accuracy_score(y_test, y_pred))
+
+"""Interpretation: The class with the highest posterior probability is chosen as the prediction — Bayes' theorem lets us update our belief about the class label given observed evidence."""

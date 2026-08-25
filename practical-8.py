@@ -1,3 +1,10 @@
+"""Practical 8: Association Rule Mining
+Objective: Generate and interpret association rules from transactional/categorical data.
+Explanation: Association rule mining (e.g., Apriori algorithm) finds relationships like "if a customer buys bread, they likely also buy butter." Key metrics:
+Support: how frequently the itemset appears
+Confidence: P(consequent | antecedent)
+Lift: how much more likely the consequent is, given the antecedent, vs. by chance"""
+
 import pandas as pd
 from mlxtend.frequent_patterns import apriori, association_rules
 from mlxtend.preprocessing import TransactionEncoder
@@ -30,3 +37,5 @@ rules = rules.sort_values('lift', ascending=False)
 
 print("\nAssociation Rules:\n",
       rules[['antecedents', 'consequents', 'support', 'confidence', 'lift']])
+
+"""Interpretation: Rules with confidence and lift > 1 are meaningful — e.g., {Milk, Bread} -> {Butter} with high lift means these items are bought together more than random chance would suggest, useful for store placement, promotions, recommendations."""

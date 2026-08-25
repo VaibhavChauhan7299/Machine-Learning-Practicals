@@ -1,3 +1,13 @@
+"""Practical 1: Data Pre-processing and Data Quality Assessment
+Objective: Load a dataset, inspect its structure, identify missing/duplicate/inconsistent data, and perform basic remediation.
+Explanation: Real-world data is messy — it has missing values (NaN), duplicate rows, wrong data types, and outliers. Before any ML model can be trained, we must:
+Inspect structure (shape, dtypes, info(), describe())
+Detect missing values (isnull().sum())
+Detect duplicates (duplicated())
+Handle missing values (drop or impute with mean/median/mode)
+Fix inconsistent data (e.g., mismatched casing, wrong types, outliers)
+Re-verify the cleaned dataset"""
+
 import pandas as pd
 import numpy as np
 
